@@ -23,7 +23,7 @@ let repo: string 				= 'SysBot.ACNHOrders';
 let branch: string | undefined 	= undefined;
 
 if (cli.input.length < 1)
-	console.log('No repository provided, using default Fehniix@SysBot.ACNHOrders:release');
+	console.log('No repository provided, using default Fehniix@SysBot.ACNHOrders');
 else {
 	const debranchedURL: string = cli.input[0].split(':')[0];
 	username	= debranchedURL.split('@')[0];
@@ -33,8 +33,8 @@ else {
 
 const basePath = process.cwd();
 
-if (!fs.existsSync(path.join(basePath, 'SysBot.ACNHOrders.csproj')) || !fs.existsSync(path.join(basePath, 'SysBot.ACNHOrders.sln'))) {
-	console.log(`SysBot.ACNHOrders.csproj or SysBot.ACNHOrders.sln could not be found. Please run this command from within the project's root folder.`);
+if (!fs.existsSync(path.join(basePath, 'SysBot.ACNHOrders.deps.json')) || !fs.existsSync(path.join(basePath, 'SysBot.Base.dll'))) {
+	console.log(`SysBot.ACNHOrders.deps.json or SysBot.Base.dll could not be found. Please run this command from within the SysBot.ACNHOrders folder.`);
 	process.exit(-1);
 }
 
@@ -58,7 +58,7 @@ await asyncExec(`cd ${repoPath} && dotnet publish --configuration release --fram
 
 console.log('Project built.');
 
-fse.copySync(path.join(repoPath, 'bin', 'Release', 'net5.0'), './test');
+fse.copySync(path.join(repoPath, 'bin', 'Release', 'net5.0'), './');
 
 console.log('Cleaning tmp folder...');
 fs.rmSync(tmpPath, { recursive: true, force: true });

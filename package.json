@@ -20,9 +20,9 @@
     "ACNHOrders",
     "bot",
     "acnh-bot",
-    "communication",
-    "socket",
-    "api"
+    "update",
+    "auto-update",
+    "updater"
   ],
   "author": "Johnny Bueti",
   "license": "MIT",
