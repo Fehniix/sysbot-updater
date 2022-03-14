@@ -1,0 +1,22 @@
+ {
+"compilerOptions": {
+  "target":"es6", 
+  "lib":[
+      "es6"
+  ], 
+  "module":"commonjs", 
+  "moduleResolution":"node", 
+  "declaration":true, 
+  "declarationMap":true, 
+  "sourceMap":true, 
+  "composite":true, 
+  "preserveConstEnums":true, 
+  "strict":true, 
+  "esModuleInterop":true, 
+  "skipLibCheck":true, 
+  "forceConsistentCasingInFileNames":true, 
+  "rootDir":"./", 
+  "outDir": "./dist"
+  },
+  "exclude": ["node_modules", "dist"]
+}

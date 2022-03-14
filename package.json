@@ -1,0 +1,32 @@
+{
+  "name": "sysbot-updater",
+  "version": "0.0.1",
+  "description": "A very lightweight package that automates the process of updating your SysBot-ACNHOrders installation.",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "prepublish": "npm run build",
+    "start": "npm run build && node ./dist/index.js",
+    "build": "rm -r -f ./dist && tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com:Fehniix/sysbot-updater.git"
+  },
+  "keywords": [
+    "api",
+    "acnh",
+    "ACNHOrders",
+    "bot",
+    "acnh-bot",
+    "communication",
+    "socket",
+    "api"
+  ],
+  "author": "Johnny Bueti",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com:Fehniix/sysbot-updater.git/issues"
+  },
+  "homepage": "https://github.com:Fehniix/sysbot-updater.git#readme"
+}
