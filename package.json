@@ -34,9 +34,11 @@
   },
   "homepage": "https://github.com:Fehniix/sysbot-updater.git#readme",
   "devDependencies": {
+    "@types/fs-extra": "^9.0.13",
     "@types/node": "^17.0.21"
   },
   "dependencies": {
+    "fs-extra": "^10.0.1",
     "meow": "^10.1.2"
   }
 }
