@@ -4,10 +4,11 @@
   "description": "A very lightweight package that automates the process of updating your SysBot-ACNHOrders installation.",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
+  "type": "module",
   "scripts": {
     "prepublish": "npm run build",
-    "start": "npm run build && node ./dist/index.js",
-    "build": "rm -r -f ./dist && tsc"
+    "start": "npm run build && ./dist/index.js",
+    "build": "rm -r -f ./dist && tsc && chmod +x ./dist/index.js"
   },
   "repository": {
     "type": "git",
@@ -25,8 +26,17 @@
   ],
   "author": "Johnny Bueti",
   "license": "MIT",
+  "bin": {
+    "sysbot-update": "./dist/index.js"
+  },
   "bugs": {
     "url": "https://github.com:Fehniix/sysbot-updater.git/issues"
   },
-  "homepage": "https://github.com:Fehniix/sysbot-updater.git#readme"
+  "homepage": "https://github.com:Fehniix/sysbot-updater.git#readme",
+  "devDependencies": {
+    "@types/node": "^17.0.21"
+  },
+  "dependencies": {
+    "meow": "^10.1.2"
+  }
 }
