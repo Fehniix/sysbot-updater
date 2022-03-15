@@ -39,8 +39,8 @@ else {
 
 const basePath = process.cwd();
 
-if (!fs.existsSync(path.join(basePath, 'SysBot.ACNHOrders.deps.json')) || !fs.existsSync(path.join(basePath, 'SysBot.Base.dll'))) {
-	console.log(`SysBot.ACNHOrders.deps.json or SysBot.Base.dll could not be found. Please run this command from within the SysBot.ACNHOrders folder.`);
+if (!fs.existsSync(path.join(basePath, 'NHSE.Core.dll')) || !fs.existsSync(path.join(basePath, 'SysBot.Base.dll'))) {
+	console.log(`NHSE.Core.dll or SysBot.Base.dll could not be found. Please run this command from within the SysBot.ACNHOrders folder.`);
 	process.exit(-1);
 }
 
