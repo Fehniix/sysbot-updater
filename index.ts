@@ -57,7 +57,7 @@ await asyncExec(`cd ./tmp && git clone ${branch !== undefined ? `-b ${branch}` :
 	process.exit(-1)
 });
 
-console.log(`Cloned ${cli.input[0]}...`);
+console.log(`Cloned ${username}@${repo}${branch ? `:${branch}` : ''}...`);
 console.log(`Building project...`);
 
 await asyncExec(`cd ${repoPath} && dotnet publish --configuration release --framework net5.0 --runtime linux-x64`);
