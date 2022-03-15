@@ -1,6 +1,6 @@
 {
   "name": "sysbot-updater",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A very lightweight package that automates the process of updating your SysBot-ACNHOrders installation.",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
