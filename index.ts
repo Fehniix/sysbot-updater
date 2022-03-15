@@ -13,17 +13,23 @@ Usage
 Examples
   	$ sysbot-update Fehniix@SysBot.ACNHOrders:release
 `, {
-	importMeta: import.meta
+	importMeta: import.meta,
+	flags: {
+		andreams: {
+			type: 'boolean',
+			alias: 'a'
+		}
+	}
 });
 
 const baseURL: string = 'https://github.com';
 
 let username: string 			= 'Fehniix';
 let repo: string 				= 'SysBot.ACNHOrders';
-let branch: string | undefined 	= undefined;
+let branch: string | undefined 	= (cli.flags.andreams) ? 'andreams' : undefined;
 
 if (cli.input.length < 1)
-	console.log('No repository provided, using default Fehniix@SysBot.ACNHOrders');
+	console.log(`No repository provided, using default Fehniix@SysBot.ACNHOrders${branch ? `:${branch}` : ''}`);
 else {
 	const debranchedURL: string = cli.input[0].split(':')[0];
 	username	= debranchedURL.split('@')[0];
