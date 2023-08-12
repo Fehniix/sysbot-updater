@@ -60,11 +60,11 @@ await asyncExec(`cd ./tmp && git clone ${branch !== undefined ? `-b ${branch}` :
 console.log(`Cloned ${username}@${repo}${branch ? `:${branch}` : ''}...`);
 console.log(`Building project...`);
 
-await asyncExec(`cd ${repoPath} && dotnet publish --configuration release --framework net5.0 --runtime linux-x64`);
+await asyncExec(`cd ${repoPath} && dotnet publish --configuration release --framework net7.0 --runtime linux-x64`);
 
 console.log('Project built.');
 
-fse.copySync(path.join(repoPath, 'bin', 'Release', 'net5.0'), './');
+fse.copySync(path.join(repoPath, 'bin', 'Release', 'net7.0'), './');
 
 console.log('Cleaning tmp folder...');
 fs.rmSync(tmpPath, { recursive: true, force: true });
